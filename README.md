@@ -92,7 +92,7 @@ Le PHP
 La gestion de base de données.
 Prise en main d’outils qui permettent de faciliter le développement.
 Faire des briefing pour voir l’avancée du projet. <br>
-Autocritique :<br>
+**Autocritique** :<br>
 Nous sommes très fiers de notre site web.<br> Comme précisé plus tôt, nous sommes en première année à l'IUT de Montpellier.<br> Ce projet nous a permis de découvrir comment mettre en pratique ces requêtes sql et les adapter à une page web.<br> Il manque quelques fonctionnalités mineures que nous n’avons pas eu le temps d'implémenter en raison d’un manque de temps.<br> Comme le fait de pouvoir consulter le profil des autres utilisateurs, faire une recherche par tag ou modifier sa photo de profil.<br> Nous nous sommes concentré sur les fonctionnalités majeures car chaque fonctionnalité nous a pris beaucoup de temps en raison de notre faible expérience.<br>
 Les erreurs : <br>
 Commencer par le front a été une erreur majeure qui nous a fait perdre beaucoup de temps, nous aurions dû commencer par concevoir toutes les fonctionnalités puis appliquer un style graphique à notre site.<br>
