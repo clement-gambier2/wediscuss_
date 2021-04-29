@@ -1,0 +1,101 @@
+/* Pour gerrer les tags*/
+
+#line-tag{
+    justify-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .tag{
+    min-width: 20%;
+    margin: 5px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding-left: 10px;
+  
+  }
+  
+  .tag-info{
+    width: 20%;
+    background-color: #C4B8FF;
+  }
+  
+  .tag-info::before{
+    content: "informatique";
+  }
+  
+  .tag-math{
+    width: 20%;
+    background-color: #FF8094;
+  
+  }
+  .tag-math::before{
+    content: "mathématique";
+  }
+
+
+  
+  .tag-science{
+    width: 25%;
+    background-color: #FFD79E;
+  
+  }
+  .tag-science::before{
+    content: "science";
+  }
+  
+
+
+  .tag-culture{
+    width: 25%;
+    background-color: green;
+  
+  }
+  .tag-culture::before{
+    content: "culture";
+  }
+
+
+  .tag-droit{
+    width: 15%;
+    background-color: yellow;
+  }
+  .tag-droit::before{
+    content: "droit";
+  }
+
+
+  
+  .tag-actu{
+    width: 25%;
+    background-color: cyan;
+  
+  }
+  .tag-actu::before{
+    content: "actualité";
+  }
+
+  
+  
+  .tag-newTech{
+    width: 35%;
+    background-color: red;
+  
+  }
+  .tag-newTech::before{
+    content: "nouvelle technologie";
+  }
+  
+  .tag-droit::before{
+    content: "droit";
+  }
+  
+  .tag-other{
+    width: 20%;
+    background-color: #94C2FF;
+  
+  }
+  .tag-other::before{
+    content: "other";
+  }
+  

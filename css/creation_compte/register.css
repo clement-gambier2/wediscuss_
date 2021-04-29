@@ -1,0 +1,17 @@
+.body-container{
+    background-color: rgb(104,104, 246);
+    border-radius: 30px;
+    color: aliceblue;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 50px 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+img{
+    width: 50%;
+    height: 50%;
+    
+
+}

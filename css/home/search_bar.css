@@ -1,0 +1,83 @@
+.body-container{
+    margin-top: 2%;
+    margin-left: 50%;
+    transform: translate(-50%, 0) ;
+    text-align: center;
+  }
+  
+  .line-depoArticle{
+    margin-top: 5%;
+  }
+
+
+ 
+.searchTerm {
+  width: 70%;
+  border: 3px solid rgb(104,104, 246);;
+  border-right: none;
+  padding: 5px;
+  height: 60px;
+  border-radius: 10px 0 0 10px;
+  outline: none;
+  color: rgb(104,104, 246);
+  padding-right: 200px;
+  
+}
+
+.searchTerm:focus{
+  color: black;
+}
+
+.searchBarCenter{
+    margin-left: 50%;
+    transform: translate(-50%, 0) ;}
+
+.searchButton {
+  width: 100px;
+  height: 75px;
+  border: 1px solid rgb(104,104, 246);
+  background: rgb(104,104, 246);
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  user-select: none;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+
+section{
+    justify-content: center;
+}
+img{
+    margin-left: 230px;
+    width:50%; 
+    height:50%;
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 100px;
+}
+
+#recherche{
+    border-radius: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+}

@@ -1,0 +1,32 @@
+section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+form{
+    background-color: #f68c68;
+    border-radius: 30px;
+    padding: 20px 20px;
+}
+
+
+ .square_btn{
+    display: inline-block;
+    padding: 20px 20px;
+	border-radius: 25px;
+    text-decoration: none;
+    color: #FFF;
+    background-color: rgb(104,104, 246);
+    transition: .4s;
+}
+
+.button{
+  display: flex;
+  justify-content: center;
+} 
+img{
+    width: 25%;
+    height: 25%;
+}
+

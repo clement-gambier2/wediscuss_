@@ -1,0 +1,84 @@
+.article{
+    border: solid;
+    
+}
+.back{
+    background-color: rgb(104,104, 246);
+    border-radius: 30px;
+    color: aliceblue;
+    margin-right: 200px;
+    margin-left: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.box-secondaire{
+    background-color: rgb(104,104, 246);
+    border-radius: 30px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px; 
+    color: aliceblue;
+
+}
+.title{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#ajout{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#commentaire1{
+    margin: 10px 50px 20px;
+    background-color: #f6d368;
+    border-radius: 30px;
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 20px;
+    margin-right: 50%;
+}
+
+#commentaire2{
+    margin: 10px 50px 20px;
+    background-color: #f68c68;
+    border-radius: 30px;
+    width: 50%;
+    display: flex;
+    align-items: flex-end; 
+    flex-direction: column;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-left: 50%;
+}
+
+#droite{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#gauche{
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+#vote{
+    border-radius: 30px;
+    background-color: #f6d368;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin:20px;
+}
+
+#like{
+    margin-right: 20px;
+}

@@ -1,0 +1,25 @@
+body{
+  background-color:rgb(250,251,255);
+  font-family: 'Oswald', sans-serif;
+  background-size: 800% 800%;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.block{
+  font-weight:500;
+  text-transform:uppercase;
+  text-decoration:none;
+  color:#16151b;
+  margin-top: 50px;
+  margin-right: 50px;
+  padding: 20px 10px;
+  border-radius: 10%;
+  font-size:16px;
+  letter-spacing:25px;
+  position:relative;
+  display:inline-block;
+}

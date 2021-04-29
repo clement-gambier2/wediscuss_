@@ -1,0 +1,22 @@
+.body-container{
+    background-color: rgb(104,104, 246);
+    border-radius: 30px;
+    color: aliceblue;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 50px 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+img{
+    width: 75%;
+    height: 75%;
+    padding-top: 20%;
+
+}
