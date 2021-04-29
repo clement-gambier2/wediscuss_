@@ -1,14 +1,20 @@
 
 # wediscuss_
 
- Une introduction et la présentation de votre équipe <br>
+ 
+
+## Une introduction et la présentation de votre équipe
+
+ <br>
 Notre équipe est composée de deux étudiants : Clément Gambier et Thomas Mauran. <br>
 Nous sommes tous les deux étudiants en première année de DUT Informatique à l’IUT de Montpellier.<br>
 L’analyse de la problématique et notre solution pour y répondre <br>
 A la lecture du sujet nous avons tout de suite pensé à réaliser un site web qui permettrait à tout le monde de déposer des informations sur lesquelles tout le monde pourrait débattre. <br>
-Afin de combattre les fakes news nous laissons chaque utilisateurs voter pour ou contre sur chaque information. <br>
+Afin de combattre les **fakes news** nous laissons chaque utilisateurs voter pour ou contre sur chaque information. <br>
 Pour connaître la fiabilité d’un article on peut également regarder le score de fiabilité de l’auteur qui est calculé selon le nombre de like et de dislike qu’il a reçu.<br>
-La présentation et justification de nos choix techniques (archi, technos, design, conventions, etc.) <br>
+
+## La présentation et justification de nos choix techniques (archi, technos, design, conventions, etc.) <br>
+
 Les technologies employées : <br>
 Notre site web a été réalisé en HTML, CSS, PHP, SQL. <br>
 Nous avons abordé au premier semestre la conception de site web avec l’HTML et le CSS donc nous avions quelques bases de plus nous avons participé ensemble à la Nuit de l’Info qui nous a également beaucoup appris. <br>
@@ -21,13 +27,17 @@ Le serveur<br>
 Héberger un site web était aussi une expérience nouvelle pour nous. <br>
 Nous avons décidé de nous tourner vers les services de Pulseheberg qui proposent des serveurs avec des prix très abordables, une capacité de stockage largement suffisante pour notre projet et enfin une interface web très pratique pour des novices comme nous. <br>
 Une fois le serveur acquis nous avons acheté le nom de domaine wedisscus.fr et grâce a l’interface plesk proposée par pulseheberg il nous a été très simple de relier notre serveur a cette url. Toujours grâce à la même interface il nous a été possible de générer un certificat SSH gratuitement pour rendre notre site https.<br>
-Notre organisation<br>
+
+## Notre organisation<br>
+
 Pour ce qui est de l’organisation nous avons au début commencé avec github et l’IDE Atom mais n’étant absolument pas habitué à utiliser github nous avons vite commencé à directement modifier les fichier sur le serveur, ce qui n’est pas une très bonne habitude mais nous permettait de toujours travailler sur une version à jour. <br>
 Un collègue de travail nous a montré visual studio code et une extension ftp qui permet de modifier directement les fichiers sur le serveur en sauvegardant ce qui nous a permis d’être bien plus productif.<br>
 Cependant si nous avions voulu être plus responsable il nous aurait fallu mettre un place un système de versionnage avec github.<br>
 Le style du site<br>
 Pour ce qui est du style graphique du site étant donné notre faible niveau en design nous avons décidé de partir sur un style épuré avec des logos simples à comprendre, des animations minimalistes et comme couleur principale le blanc et le lavande. <br>
-Les fonctionnalités de notre site web<br>
+
+## Les fonctionnalités de notre site web<br>
+
 Avant d’aborder les fonctionnalités, voici une représentation de notre base de données afin de mieux appréhender nos démarches ( les flèches représentantes les clés étrangères présentes entre les tables).<br>
 Fonctionnalités importantes : <br>
 
@@ -71,7 +81,8 @@ Nouvelle technologie
 Autre
 
 
-Conclusion<br>
+## Conclusion<br>
+
 Les difficultés : <br>
 L’apprentissage du PHP, la syntaxe est vraiment difficile à prendre en main. <br>
 L’implémentation du CSS dans les fichiers PHP. Certaines fois cela fonctionnait, d’autres fois non, il se pourrait qu’il y ait un peu de CSS inline … pardon ...<br>
