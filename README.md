@@ -13,7 +13,7 @@ A la lecture du sujet nous avons tout de suite pensé à réaliser un site web q
 Afin de combattre les fakes news nous laissons chaque utilisateurs voter pour ou contre sur chaque information. <br>
 Pour connaître la fiabilité d’un article on peut également regarder le score de fiabilité de l’auteur qui est calculé selon le nombre de like et de dislike qu’il a reçu.<br>
 
-## La présentation et justification de nos choix techniques (archi, technos, design, conventions, etc.) <br>
+## La présentation et justification de nos choix techniques <br>
 
 Les technologies employées : <br>
 Notre site web a été réalisé en HTML, CSS, PHP, SQL. <br>
