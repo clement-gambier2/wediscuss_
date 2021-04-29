@@ -10,7 +10,7 @@ Notre équipe est composée de deux étudiants : Clément Gambier et Thomas Maur
 Nous sommes tous les deux étudiants en première année de DUT Informatique à l’IUT de Montpellier.<br>
 L’analyse de la problématique et notre solution pour y répondre <br>
 A la lecture du sujet nous avons tout de suite pensé à réaliser un site web qui permettrait à tout le monde de déposer des informations sur lesquelles tout le monde pourrait débattre. <br>
-Afin de combattre les **fakes news** nous laissons chaque utilisateurs voter pour ou contre sur chaque information. <br>
+Afin de combattre les fakes news nous laissons chaque utilisateurs voter pour ou contre sur chaque information. <br>
 Pour connaître la fiabilité d’un article on peut également regarder le score de fiabilité de l’auteur qui est calculé selon le nombre de like et de dislike qu’il a reçu.<br>
 
 ## La présentation et justification de nos choix techniques (archi, technos, design, conventions, etc.) <br>
