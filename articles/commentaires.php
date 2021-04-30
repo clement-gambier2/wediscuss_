@@ -1,42 +1,33 @@
 <?php include('../include/nav.php'); ?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
-    <head>
-        <meta charset="utf-8" />
-        <title>wediscuss</title>
-	<link href="style.css" rel="stylesheet" />
+<head>
+    <meta charset="utf-8" />
+    <title>wediscuss</title>
+    <link href="style.css" rel="stylesheet" />
     <link href="../css/tagLook.css" rel="stylesheet" />
+    <link href="../css/commentaire.css" rel="stylesheet" />
 
-    <style>
-    .article{
-        border: solid;
-        
-    }
-    .back{
-        background-color: #1d3557;
-        padding: 20% 20%;
-        border-radius: 5%;
-        margin-top: 10%;
-        color:white;
-    }
-    
-    
-    
-    </style>
-    </head>
+</head>
 
-    <body>
-        <p><a href="afficher_articles.php">Retour à la liste des infos</a></p>
+<body>
+
+<p><a href="afficher_articles.php"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-back-up" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#6868f6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M9 13l-4 -4l4 -4m-4 4h11a4 4 0 0 1 0 8h-1" />
+        </svg></a>
+</p>
+
 
 <?php
 // Connexion à la base de données
 try
 {
-	$bdd = new PDO('mysql:host=localhost;dbname=wediscus_;charset=utf8', 'makaque', '9^0h6Yfg');
+    $bdd = new PDO('mysql:host=localhost;dbname=wediscus_;charset=utf8', 'makaque', '9^0h6Yfg');
 }
 catch(Exception $e)
 {
-        die('Erreur : '.$e->getMessage());
+    die('Erreur : '.$e->getMessage());
 }
 
 // Récupération de l'article
@@ -82,7 +73,7 @@ $reponse = $bdd->query($sql);
 if($data = $reponse->fetch()){
     $nbDislike = $data['nb'];
 }
- $total = $nbDislike + $nbLike;
+$total = $nbDislike + $nbLike;
 
 if($total == 0){
     $scoreFiable = 0;
@@ -107,98 +98,126 @@ $reponse->closeCursor();
 
 
     <p>
-    <?php
-    echo nl2br(htmlspecialchars($donnees['contenu']));
-    ?>
+        <?php
+        echo nl2br(htmlspecialchars($donnees['contenu']));
+        ?>
     </p>
     <p>
-    sources : 
-    <?php
-    echo nl2br(htmlspecialchars($donnees['sources']));
-    ?>
+        <?php
+
+        $source = $donnees['sources'];
+
+        $test_source = substr($source,0,5);
+
+        if($test_source == 'https'){
+            echo "<a href='$source'>$source</a>";
+        }
+        else{
+            echo $source;
+        }
+        ?>
+
+
     </p>
     <?php
     $array = array(
-            1 => '<div class="tag tag-info"></div>',
-            2 => '<div class="tag tag-math"></div>',
-            3 => '<div class="tag tag-science"></div>',
-            4 => '<div class="tag tag-culture"></div>',
-            5 => '<div class="tag tag-droit"></div>',
-            6 => '<div class="tag tag-actu"></div>',
-            7 => '<div class="tag tag-newTech"></div>',
-            8 => '<div class="tag tag-other"></div>'
-          );
+        1 => '<div class="tag tag-info"></div>',
+        2 => '<div class="tag tag-math"></div>',
+        3 => '<div class="tag tag-science"></div>',
+        4 => '<div class="tag tag-culture"></div>',
+        5 => '<div class="tag tag-droit"></div>',
+        6 => '<div class="tag tag-actu"></div>',
+        7 => '<div class="tag tag-newTech"></div>',
+        8 => '<div class="tag tag-other"></div>'
+    );
 
-          $nombreDeTags = 0;
-          
-          $sql = 'SELECT COUNT(*) AS nbTags FROM tags';
-          $reponse = $bdd->query($sql);
-          if($data = $reponse->fetch()){
-            $nombreDeTags = $data['nbTags'];
-          }
+    $nombreDeTags = 0;
 
-          for($i = 1; $i < $nombreDeTags + 1; $i++){
-            $sql = 'SELECT * FROM tagLink WHERE articleId = '. $article . ' AND tagId =' . $i;
-            $reponse = $bdd->query($sql);
-            if($data = $reponse ->fetch()){
-              echo $array[$i];
-            }
+    $sql = 'SELECT COUNT(*) AS nbTags FROM tags';
+    $reponse = $bdd->query($sql);
+    if($data = $reponse->fetch()){
+        $nombreDeTags = $data['nbTags'];
+    }
 
-          }
-          $reponse->closeCursor();
-          ?>
+    for($i = 1; $i < $nombreDeTags + 1; $i++){
+        $sql = 'SELECT * FROM tagLink WHERE articleId = '. $article . ' AND tagId =' . $i;
+        $reponse = $bdd->query($sql);
+        if($data = $reponse ->fetch()){
+            echo $array[$i];
+        }
+
+    }
+    $reponse->closeCursor();
+    ?>
 </div>
 
 <!-- Systeme de like et dislike -->
-
-<p>Nombre de like : <?= $likes ?></p>
-<a href="php/aime.php?t=2&id=<?= $article; ?>"><img src="../images/icons/like.svg" alt="like" style="width: 2%; height: 2%;"></a>
-<br>
-<p>Nombre de dislike : <?= $dislikes ?></p>
-<a href="php/aime.php?t=3&id=<?= $article; ?>"><img src="../images/icons/dislike.svg" alt="like" style="width: 2%; height: 2%;"></a>
-
-
-
-
+<section id="avis">
+    <div>
+        <a href="php/aime.php?t=2&id=<?= $article; ?>">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-thumb-up" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#6868f6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M7 11v8a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1v-7a1 1 0 0 1 1 -1h3a4 4 0 0 0 4 -4v-1a2 2 0 0 1 4 0v5h3a2 2 0 0 1 2 2l-1 5a2 3 0 0 1 -2 2h-7a3 3 0 0 1 -3 -3" />
+            </svg>
+        </a>
+        <p id="aime">Nombre de like : <?= $likes ?></p>
+    </div>
+    <div>
+        <a href="php/aime.php?t=3&id=<?= $article; ?>">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-thumb-down" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#6868f6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M7 13v-8a1 1 0 0 0 -1 -1h-2a1 1 0 0 0 -1 1v7a1 1 0 0 0 1 1h3a4 4 0 0 1 4 4v1a2 2 0 0 0 4 0v-5h3a2 2 0 0 0 2 -2l-1 -5a2 3 0 0 0 -2 -2h-7a3 3 0 0 0 -3 3" />
+            </svg>
+        </a>
+        <p>Nombre de dislike : <?= $dislikes ?></p>
+    </div>
+</section>
 
 
 <?php
 $req->closeCursor(); // Important : on libère le curseur pour la prochaine requête
 ?>
 
-<fieldset>
-    <legend>Ajouter une source</legend>
-    <form name="frmContact" method="post" action="sources.php?article=<?php echo $article;?>">
-        
-        <p>
-        <label for="commentaire">Entrer une source</label>
-        <textarea name="source" id="source"></textarea>
-        </p>
-        <p>&nbsp;</p>
-        <p>
-        <input type="submit" name="submit" id="Submit" value="Ajouter">
-        </p>
-    </form>
-</fieldset>
+<div id="ajout">
+    <section class="box-secondaire">
+        <div class="title">
+            <h3>Ajouter une source</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-send" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <line x1="10" y1="14" x2="21" y2="3" />
+                <path d="M21 3l-6.5 18a0.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a0.55 .55 0 0 1 0 -1l18 -6.5" />
+            </svg>
+        </div>
+        <form name="frmContact" method="post" action="sources.php?article=<?php echo $article;?>">
+            <p>Entrer une source</p>
+            <textarea name="source" id="source"></textarea>
+            <input type="submit" name="submit" id="Submit" value="Ajouter">
+        </form>
+    </section>
+
+
+
+
+    <section class="box-secondaire" id="comm">
+        <div class="title">
+            <h3>Ajouter un commentaire</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-writing" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M20 17v-12c0 -1.121 -.879 -2 -2 -2s-2 .879 -2 2v12l2 2l2 -2z" />
+                <path d="M16 7h4" />
+                <path d="M18 19h-13a2 2 0 1 1 0 -4h4a2 2 0 1 0 0 -4h-3" />
+            </svg>
+        </div>
+        <form name="frmContact" method="post" action="envoi_commentaire.php?article=<?php echo $article;?>">
+            <label for="commentaire">Entrer un commentaire</label>
+            <textarea name="commentaire"></textarea>
+            <input type="submit" name="submit" id="Submit" value="Ajouter">
+        </form>
+    </section>
+</div>
+
 
 <h2>Commentaires</h2>
-
-<fieldset>
-    <legend>Ajouter un commentaire</legend>
-    <form name="frmContact" method="post" action="envoi_commentaire.php?article=<?php echo $article;?>">
-        
-        <p>
-        <label for="commentaire">Entrer un commentaire</label>
-        <textarea name="commentaire" id="commentaire"></textarea>
-        </p>
-        <p>&nbsp;</p>
-        <p>
-        <input type="submit" name="submit" id="Submit" value="Ajouter">
-        </p>
-    </form>
-</fieldset>
-
-
 <!-- // Récupération des commentaires -->
 <?php
 $req = $bdd->prepare("SELECT username, commentaire
@@ -207,19 +226,44 @@ WHERE id_article = ?");
 
 $req->execute(array($_GET['article']));
 
-while ($donnees = $req->fetch())
-{
-?>
-<div style="border: 6px solid #1C6EA4; margin: 10px 50px 20px;">
-    <p> de <strong><?php echo htmlspecialchars($donnees['username']); ?></strong></p>
-    <p><?php echo nl2br(htmlspecialchars($donnees['commentaire'])); ?></p>
-</div>
+$num_commentaire = $bdd->prepare('SELECT id_commentaire FROM commentaires WHERE id_article = ?');
+$num_commentaire->execute(array($article));
+$num_commentaire = $num_commentaire->rowCount();
 
-<?php
+while ($donnees = $req->fetch()){
+    if($num_commentaire % 2 == 0){
+        ?>
+        <section id="gauche">
+            <div id="commentaire1">
+                <p> de <strong><?php echo htmlspecialchars($donnees['username']); ?></strong></p>
+                <p><?php echo nl2br(htmlspecialchars($donnees['commentaire'])); ?></p>
+            </div>
+        </section>
+        <?php
+    }
+    else{
+        ?>
+        <section id="droite">
+            <div id="commentaire2">
+                <p> de <strong><?php echo htmlspecialchars($donnees['username']); ?></strong></p>
+                <p><?php echo nl2br(htmlspecialchars($donnees['commentaire'])); ?></p>
+            </div>
+        </section>
+
+        <?php
+    }
+
+    ?>
+
+
+
+
+    <?php
+    $num_commentaire = $num_commentaire - 1;
 } // Fin de la boucle des commentaires
 $req->closeCursor();
 ?>
 </body>
-<?php include('include/footer.php'); ?>
+<?php include('../include/footer.php'); ?>
 
 </html>
