@@ -1,7 +1,7 @@
 <?php
     try
     {
-        $bdd = new PDO('mysql:host=localhost;dbname=wediscus_;charset=utf8', 'makaque', '9^0h6Yfg');
+        $bdd = new PDO('mysql:host=localhost;dbname=clement8_;charset=utf8', 'clement_bd', 'F~ih43i5');
     }
     catch(Exception $e)
     {
@@ -71,6 +71,6 @@
         }
         
     }
-    header('Location: https://wediscuss.fr/articles/commentaires.php?article='.$getid);
+    header('Location: https://clement-gambier.fr/articles/commentaires.php?article='.$getid);
     
 ?>

@@ -17,7 +17,7 @@
     <!-- Enveloppe -->
 
     <div id = "topBox" class="box">
-        <a href="/deposer_article/form.html">
+        <a href="deposer_article/form.php">
             <div class="letter-image">
                 <div class="animated-mail">
                     <div class="back-fold"></div>

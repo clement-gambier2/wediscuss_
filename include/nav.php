@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/navbar.css">
     <link rel="stylesheet" href="/css/hover.css">
-    <title>Le tribunal de l'information</title>
+    <title>We discuss</title>
   </head>
   <nav>
     <div class="container">

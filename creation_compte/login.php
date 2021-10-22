@@ -95,7 +95,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="stylesheet" href="../css/hover.css">
     <link rel="stylesheet" href="../css/creation_compte/login.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js"></script> -->
 
 
 
@@ -125,10 +125,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span class="invalid-feedback"><?php echo $password_err; ?></span>
             </div>
             <div class="form-group">
-            <button class="g-recaptcha" 
-                data-sitekey="6LfJXKkaAAAAAO7mLT0qUP12JRLFQDZdTHdeC7dG" 
-                data-callback='onSubmit' 
-                data-action='submit'>Se connecter</button>            
+            <button data-action='submit'>Se connecter</button>            
             </div>
             <p>Vous n'avez pas de compte ? <a style="color: white;" href="register.php">Créer un compte</a>.</p>
             

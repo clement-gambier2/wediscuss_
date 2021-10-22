@@ -23,7 +23,7 @@
 // Connexion à la base de données
 try
 {
-    $bdd = new PDO('mysql:host=localhost;dbname=wediscus_;charset=utf8', 'makaque', '9^0h6Yfg');
+    $bdd = new PDO('mysql:host=localhost;dbname=clement8_;charset=utf8', 'clement_bd', 'F~ih43i5');
 }
 catch(Exception $e)
 {
@@ -154,7 +154,7 @@ $reponse->closeCursor();
 <!-- Systeme de like et dislike -->
 <section id="avis">
     <div>
-        <a href="php/aime.php?t=2&id=<?= $article; ?>">
+        <a href="aime.php?t=2&id=<?= $article; ?>">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-thumb-up" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#6868f6" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <path d="M7 11v8a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1v-7a1 1 0 0 1 1 -1h3a4 4 0 0 0 4 -4v-1a2 2 0 0 1 4 0v5h3a2 2 0 0 1 2 2l-1 5a2 3 0 0 1 -2 2h-7a3 3 0 0 1 -3 -3" />
@@ -163,7 +163,7 @@ $reponse->closeCursor();
         <p id="aime">Nombre de like : <?= $likes ?></p>
     </div>
     <div>
-        <a href="php/aime.php?t=3&id=<?= $article; ?>">
+        <a href="aime.php?t=3&id=<?= $article; ?>">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-thumb-down" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#6868f6" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <path d="M7 13v-8a1 1 0 0 0 -1 -1h-2a1 1 0 0 0 -1 1v7a1 1 0 0 0 1 1h3a4 4 0 0 1 4 4v1a2 2 0 0 0 4 0v-5h3a2 2 0 0 0 2 -2l-1 -5a2 3 0 0 0 -2 -2h-7a3 3 0 0 0 -3 3" />

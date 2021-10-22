@@ -7,7 +7,7 @@ session_start();
 /* Attempt to connect to MySQL database */
 try
 {
-  $bdd = new PDO('mysql:host=localhost;dbname=wediscus_;charset=utf8', 'makaque', '9^0h6Yfg', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
+  $bdd = new PDO('mysql:host=localhost;dbname=clement8_;charset=utf8', 'clement_bd', 'F~ih43i5', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
   $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 }
