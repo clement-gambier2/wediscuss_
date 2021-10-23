@@ -1,7 +1,7 @@
 
 # wediscuss_
 
- Acceder à notre site 🖥 : https://wediscuss.fr
+ Acceder à notre site 🖥 : https://clement-gambier.fr/index.php
 
 ## Une introduction et la présentation de votre équipe
 
